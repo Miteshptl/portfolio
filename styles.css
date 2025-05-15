@@ -1,4 +1,4 @@
-
+/* 
 body {
     background-color: black;
     color: #FFFFFF;
@@ -200,4 +200,64 @@ ul img{
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
-} */
+} */ */
+
+body {
+    background-color: black;
+    color: #FFFFFF;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.fullbody {
+    display: grid;
+    grid-template-areas: "menu content";
+    grid-template-columns: 250px 1fr;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #111;
+    padding: 10px;
+    min-height: 100vh;
+    position: fixed;
+    width: 250px;
+    z-index: 1030;
+    color: white;
+}
+
+.content {
+    grid-area: content;
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Responsive layout: hide sidebar and use navbar toggler */
+@media (max-width: 768px) {
+    .fullbody {
+        display: block;
+    }
+
+    .menu {
+        width: 100%;
+        position: relative;
+        min-height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .navbar-collapse {
+        background-color: #111;
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        background-color: #fff;
+    }
+}
